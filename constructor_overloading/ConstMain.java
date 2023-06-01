@@ -10,4 +10,16 @@ class rectangle{
         length = side;
         breadth = side;
     }
+    rectangle(int len, int brd){
+        length = len;
+        breadth = brd;
+    }
+    int calculateArea{
+        return length * breadth;
+    }
+}
+
+public class ConstMain{
+
+
 }
