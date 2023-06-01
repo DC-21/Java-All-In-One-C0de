@@ -1,4 +1,4 @@
-class Vehicle {
+abstract class Vehicle {
     protected String brand;
     protected String color;
 
@@ -7,10 +7,7 @@ class Vehicle {
         this.color = color;
     }
 
-    public void displayInfo() {
-        System.out.println("Brand: " + brand);
-        System.out.println("Color: " + color);
-    }
+    public abstract void displayInfo();
 }
 
 class Car extends Vehicle {
@@ -23,36 +20,17 @@ class Car extends Vehicle {
 
     @Override
     public void displayInfo() {
-        super.displayInfo();
-        System.out.println("Number of doors: " + numDoors);
-    }
-}
-
-class Motorcycle extends Vehicle {
-    private int numWheels;
-
-    public Motorcycle(String brand, String color, int numWheels) {
-        super(brand, color);
-        this.numWheels = numWheels;
-    }
-
-    @Override
-    public void displayInfo() {
-        super.displayInfo();
-        System.out.println("Number of wheels: " + numWheels);
+        System.out.println("Car - Brand: " + brand);
+        System.out.println("Car - Color: " + color);
+        System.out.println("Car - Number of doors: " + numDoors);
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        Vehicle vehicle = new Vehicle("Generic", "Black");
-        Car car = new Car("Toyota", "Red", 4);
-        Motorcycle motorcycle = new Motorcycle("Honda", "Blue", 2);
+        Vehicle car = new Car("Toyota", "Red", 4);
+        Vehicle motorcycle = new Motorcycle("Honda", "Blue", 2);
 
-        vehicle.displayInfo();
-        System.out.println("------------------");
         car.displayInfo();
-        System.out.println("------------------");
-        motorcycle.displayInfo();
     }
 }
