@@ -7,6 +7,7 @@ class rectangle{
         breadth = 0;
     }
     rectangle(int side){
-        
+        length = side;
+        breadth = side;
     }
 }
