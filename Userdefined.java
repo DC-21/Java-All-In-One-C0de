@@ -13,7 +13,7 @@ public class userDefinedException{
             }
             System.out.println("you are eligible");
         }
-        catch (AgeException ex){{}
+        catch (AgeException ex){
             System.out.println("exception: " + ex.getMessage());
         }
     }
