@@ -10,5 +10,11 @@ class Palindrome{
                 break;
             }
         }
+        if(isPalindrome){
+            System.out.println("string is palindrome");
+        }
+        else{
+            System.out.println("string is not palindrome");
+        }
     }
 }
